@@ -1,6 +1,55 @@
 # verifyReceipt
 内购验证
 
+# 越狱订单和正常订单对比:
+- 越狱订单虽然状态返回是成功的，但是```in_app```这个参数是空的。
+- 大概查了一下。iOS7以下是没有这个in_app参数的，iOS7以上是有的。因为现在App基本支持的起步都是iOS8 iOS9了，iOS7可以不用管了。
+
+```
+越狱订单receipt_data向苹果服务器校验后如下：
+{
+    "status": 0, 
+    "environment": "Production", 
+    "receipt": {
+        "receipt_type": "Production", 
+        "adam_id": 1377028992, 
+        "app_item_id": 1377028992, 
+        "bundle_id": "*******【敏感信息不给看】*******", 
+        "application_version": "3", 
+        "download_id": 80042231041057, 
+        "version_external_identifier": 827853261, 
+        "receipt_creation_date": "2018-07-23 07:30:45 Etc/GMT", 
+        "receipt_creation_date_ms": "1532331045000", 
+        "receipt_creation_date_pst": "2018-07-23 00:30:45 America/Los_Angeles", 
+        "request_date": "2018-07-23 07:33:54 Etc/GMT", 
+        "request_date_ms": "1532331234485", 
+        "request_date_pst": "2018-07-23 00:33:54 America/Los_Angeles", 
+        "original_purchase_date": "2018-07-01 12:16:21 Etc/GMT", 
+        "original_purchase_date_ms": "1530447381000", 
+        "original_purchase_date_pst": "2018-07-01 05:16:21 America/Los_Angeles", 
+        "original_application_version": "3", 
+        "in_app": [ ]
+    }
+}
+```
+
+```
+苹果服务器向返回status结果，含义如下，其中为0时表示成功。
+21000 App Store无法读取你提供的JSON数据
+21002 收据数据不符合格式
+21003 收据无法被验证
+21004 你提供的共享密钥和账户的共享密钥不一致
+21005 收据服务器当前不可用
+21006 收据是有效的，但订阅服务已经过期。当收到这个信息时，解码后的收据信息也包含在返回内容中
+21007 收据信息是测试用（sandbox），但却被发送到产品环境中验证
+21008 收据信息是产品环境中使用，但却被发送到测试环境中验证
+```
+
+详见：https://www.jianshu.com/p/5cf686e92924
+
+---
+
+# 内购验证示例
 ```
 - (void)xx_verify_test:(SKPaymentTransaction *)transaction
 {
