@@ -122,3 +122,43 @@
 }
 
 ```
+
+
+# 过期
+
+```
+{
+    status = 0;
+    environment = Sandbox;
+    receipt =     {
+        "adam_id" = 0;
+        "app_item_id" = 0;
+        "application_version" = 1;
+        "bundle_id" = "com.haocold.xxxxx";
+        "download_id" = 0;
+        "expiration_date" = "2018-10-19 06:54:54 Etc/GMT";
+        "expiration_date_ms" = 1539932094000;
+        "expiration_date_pst" = "2018-10-18 23:54:54 America/Los_Angeles";
+        "in_app" =         (
+            //......
+        )
+        "organization_display_name" = "ACME Bad VPPReceipt Inc.";
+        "original_application_version" = "1.0";
+        "original_purchase_date" = "2013-08-01 07:00:00 Etc/GMT";
+        "original_purchase_date_ms" = 1375340400000;
+        "original_purchase_date_pst" = "2013-08-01 00:00:00 America/Los_Angeles";
+        "receipt_creation_date" = "2018-10-19 06:54:54 Etc/GMT";
+        "receipt_creation_date_ms" = 1539932094000;
+        "receipt_creation_date_pst" = "2018-10-18 23:54:54 America/Los_Angeles";
+        "receipt_type" = ProductionVPPSandbox;
+        "request_date" = "2018-10-19 06:54:59 Etc/GMT";
+        "request_date_ms" = 1539932099562;
+        "request_date_pst" = "2018-10-18 23:54:59 America/Los_Angeles";
+        "version_external_identifier" = 0;
+}
+```
+
+
+
+
+
