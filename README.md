@@ -124,7 +124,7 @@
 ```
 
 
-# 过期
+# 过期 Expired  || 撤销 Revoked
 
 ```
 {
@@ -157,8 +157,4 @@
         "version_external_identifier" = 0;
 }
 ```
-
-
-
-
 
