@@ -136,9 +136,9 @@
         "application_version" = 1;
         "bundle_id" = "com.haocold.xxxxx";
         "download_id" = 0;
-        "expiration_date" = "2018-10-19 06:54:54 Etc/GMT";
-        "expiration_date_ms" = 1539932094000;
-        "expiration_date_pst" = "2018-10-18 23:54:54 America/Los_Angeles";
+        "expiration_date" = "2018-10-19 06:54:54 Etc/GMT";                   // 过期参数
+        "expiration_date_ms" = 1539932094000;                                // 过期参数
+        "expiration_date_pst" = "2018-10-18 23:54:54 America/Los_Angeles";   // 过期参数
         "in_app" =         (
             //......
         )
