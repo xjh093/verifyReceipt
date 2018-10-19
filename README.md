@@ -124,7 +124,7 @@
 ```
 
 
-# 过期 Expired  || 撤销 Revoked
+# 过期 Expired or  撤销 Revoked
 
 ```
 {
@@ -158,3 +158,7 @@
 }
 ```
 
+# 非自动续期项目
+
+![image](https://github.com/xjh093/verifyReceipt/blob/master/image1.png)
+![image](https://github.com/xjh093/verifyReceipt/blob/master/image2.png)
